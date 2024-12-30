@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #0e0e0e;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #container {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+            border: 1px solid #e1e1e1;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .form-group {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="number"],
+        .form-group input[type="text"],
+        .form-group input[type="date"] {
+            width: 100%;
+            padding: 10px 10px 10px 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        .form-group img {
+            position: absolute;
+            left: 10px;
+            top: 70%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+        }
+
+        .radio-group {
+            margin: 15px 0;
+        }
+
+        .radio-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        #copiarDadosBtn {
+            display: block;
+            margin: 20px auto;
+            width: calc(100% - 22px);
+            padding: 12px 0;
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        @media (min-width: 1200px) {
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1 style="font-family: 'Times New Roman', Times, serif;">Simulação</h1>
+        <h3 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Envie seus dados para fazermos sua análise de crédito diretamente pelo <strong style="color: rgb(0, 0, 0);">WhatsApp</strong> "whatsapp.png"</h3>
+        <h4 style="text-align: center; font-family: 'Times New Roman', Times, serif;">(Não é necessário o uso de pontos e vírgulas ao digitar números)</h4>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="precoImovel">Preço do Imóvel:</label>
+                <input type="number" id="precoImovel" placeholder="Digite o preço do imóvel">
+                <img src="dinheiro-icon.png" alt="Ícone">
+            </div>
+            <div class="form-group">
+                <label for="valorEntrada">Valor da Entrada e Saldo do FGTS:</label>
+                <input type="number" id="valorEntrada" placeholder="Digite o valor da entrada e do saldo do FGTS">
+                <img src="balanca-icon.png" alt="Ícone">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="mesesFinanciamento">Meses de Financiamento:</label>
+                <input type="number" id="mesesFinanciamento" placeholder="Digite o número de meses de financiamento" min="1" max="420">
+                <img src="mensal-icon.png" alt="Ícone">
+            </div>
+            <div class="form-group">
+                <label for="rendaMensal">Renda Mensal:</label>
+                <input type="number" id="rendaMensal" placeholder="Digite a sua renda mensal">
+                <img src="mensal-icon.png" alt="Ícone">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="dataNascimento">Data de nascimento:</label>
+                <input type="date" id="dataNascimento" placeholder="Digite a sua Data de nascimento" required>
+                <img src="balao-icon.png" alt="Ícone">
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" placeholder="Digite o seu CPF" maxlength="11">
+                <img src="pessoinha-icon.png" alt="Ícone">
+            </div>
+        </div>
+        <div class="radio-group">
+            <label for="carteira">Você tem, ou já teve 3 anos ou mais de carteira assinada?</label>
+            <label>
+                <input type="radio" name="carteiraOpcao" value="sim"> Sim
+            </label>
+            <label>
+                <input type="radio" name="carteiraOpcao" value="nao"> Não
+            </label>
+        </div>
+        <div class="radio-group">
+            <label for="dependente">Você tem dependente?</label>
+            <label>
+                <input type="radio" name="dependenteOpcao" value="sim"> Sim
+            </label>
+            <label>
+                <input type="radio" name="dependenteOpcao" value="nao"> Não
+            </label>
+        </div>
+        <h4 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Se for autônomo(a), favor mandar foto da Identidade e CPF</h4>
+        <h4 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Se trabalhar de carteira assinada, mandar foto de identidade, CPF e o último Contra-Cheque</h4>
+        <button id="copiarDadosBtn" onclick="copiarDados()">Enviar</button>
+        <div id="card">
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        function copiarDados() {
+            const precoImovel = parseFloat(document.getElementById('precoImovel').value);
+            const valorEntrada = parseFloat(document.getElementById('valorEntrada').value);
+            const mesesFinanciamento = parseInt(document.getElementById('mesesFinanciamento').value);
+            const rendaMensal = parseFloat(document.getElementById('rendaMensal').value);
+            const dataNascimento = document.getElementById('dataNascimento').value;
+            const cpf = document.getElementById('cpf').value;
+
+            if (!validarCPF(cpf)) {
+                alert('O CPF informado é inválido.');
+                return;
+            }
+
+            const carteiraOpcao = document.querySelector('input[name="carteiraOpcao"]:checked');
+            let opcaoSelecionada = '';
+
+            if (carteiraOpcao) {
+                opcaoSelecionada = carteiraOpcao.value;
+            }
+
+            const dependenteOpcao = document.querySelector('input[name="dependenteOpcao"]:checked');
+            let dependenteSelecionado = '';
+
+            if (dependenteOpcao) {
+                dependenteSelecionado = dependenteOpcao.value;
+            }
+
+            const idade = calcularIdade(dataNascimento);
+            const dataNascimentoFormatada = formatarDataNascimento(dataNascimento);
+            const resultado = calcularSimulacao(precoImovel, valorEntrada, mesesFinanciamento, rendaMensal);
+
+            const dadosCopiar = `
+${window.location.href}
+
+*(Informações da Simulação:)*
+
+*Preço do Imóvel:*
+⟶ R$ ${formatarValor(precoImovel)}
+
+*Valor da Entrada e Saldo do FGTS:*
+⟶ R$ ${formatarValor(valorEntrada)}
+
+*Meses de Financiamento:*
+⟶ ${mesesFinanciamento} meses
+
+*Renda Mensal:*
+⟶ R$ ${formatarValor(rendaMensal)}
+
+*Data de Nascimento:*
+⟶ ${dataNascimentoFormatada}
+
+*CPF:*
+⟶ ${cpf}
+
+*Carteira assinada por 3 anos ou mais:*
+⟶ ${opcaoSelecionada === 'sim' ? 'Sim' : 'Não'}
+
+*Você tem dependente?:*
+⟶ ${dependenteSelecionado === 'sim' ? 'Sim' : 'Não'}
+`;
+
+            const inputTemp = document.createElement('textarea');
+            inputTemp.value = dadosCopiar;
+            document.body.appendChild(inputTemp);
+
+            inputTemp.select();
+            document.execCommand('copy');
+            document.body.removeChild(inputTemp);
+
+            alert('Os dados foram copiados para a área de transferência.');
+
+            setTimeout(function () {
+                window.location.href = 'https://wa.me/5583986739013?text=' + encodeURIComponent(dadosCopiar);
+            }, 1000);
+        }
+
+        function formatarDataNascimento(data) {
+            const partes = data.split('-');
+            return `${partes[2]}/${partes[1]}/${partes[0]}`;
+        }
+
+        function calcularIdade(dataNascimento) {
+            const dataNasc = new Date(dataNascimento);
+            const hoje = new Date();
+            let idade = hoje.getFullYear() - dataNasc.getFullYear();
+            const m = hoje.getMonth() - dataNasc.getMonth();
+            if (m < 0 || (m === 0 && hoje.getDate() < dataNasc.getDate())) {
+                idade--;
+            }
+            return idade;
+        }
+
+        function formatarValor(valor) {
+            return valor.toFixed(2).replace('.', ',');
+        }
+
+        function validarCPF(cpf) {
+            cpf = cpf.replace(/\D+/g, ''); // Remove caracteres não numéricos
+            
+            if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
+                return false; // CPF com todos os dígitos iguais é inválido
+            }
+
+            let soma = 0;
+            let resto;
+
+            // Validação do primeiro dígito verificador
+            for (let i = 1; i <= 9; i++) {
+                soma += parseInt(cpf.charAt(i - 1)) * (11 - i);
+            }
+            resto = (soma * 10) % 11;
+            if (resto === 10 || resto === 11) {
+                resto = 0;
+            }
+            if (resto !== parseInt(cpf.charAt(9))) {
+                return false;
+            }
+
+            // Validação do segundo dígito verificador
+            soma = 0;
+            for (let i = 1; i <= 10; i++) {
+                soma += parseInt(cpf.charAt(i - 1)) * (12 - i);
+            }
+            resto = (soma * 10) % 11;
+            if (resto === 10 || resto === 11) {
+                resto = 0;
+            }
+            if (resto !== parseInt(cpf.charAt(10))) {
+                return false;
+            }
+
+            return true;
+        }
+
+        function calcularSimulacao(precoImovel, valorEntrada, mesesFinanciamento, rendaMensal) {
+            const taxaJurosBanco = 0.04; // Juros de 4% do valor do imóvel
+            const parcelas = mesesFinanciamento;
+            const idadeMaximaFinanciamento = 50;
+            const idadeMaximaTotal = 80;
+            const percentualRendaParaParcela = 0.3; // A parcela não deve comprometer mais do que 30% da renda mensal
+
+            const valorFinanciado = precoImovel - valorEntrada;
+            const juros = valorFinanciado * taxaJurosBanco;
+            const valorTotalFinanciamento = valorFinanciado + juros;
+            const valorParcela = valorTotalFinanciamento / parcelas;
+            const valorParcelaRenda = rendaMensal * percentualRendaParaParcela;
+
+            return valorParcela;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        .replaced-img {
+            max-width: 25px;
+            height: auto;
+            vertical-align: middle; /* Ajusta o alinhamento vertical da imagem */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
+            images.forEach(element => {
+                element.innerHTML = element.innerHTML.replace(/"([^"]+\.(png|jpg|jpeg|gif))"/g, '<img src="$1" alt="Image" class="replaced-img">');
+            });
+        });
+    </script>

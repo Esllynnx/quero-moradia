@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Imóveis</title>
+</head>
+<body>
+  <div id="productList"></div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const queryParams = new URLSearchParams(window.location.search);
+      const bedroomsFilter = queryParams.get("bedrooms");
+      const neighborhoodFilter = queryParams.get("neighborhood");
+      const propertyTypeFilter = queryParams.get("propertyType");
+      const priceRangeFilter = queryParams.get("priceRange");
+
+      const filteredProperties = properties.filter(property =>
+        (bedroomsFilter === "" || property.bedrooms === parseInt(bedroomsFilter)) &&
+        (neighborhoodFilter === "" || property.neighborhood === neighborhoodFilter) &&
+        (propertyTypeFilter === "" || property.classification === propertyTypeFilter) &&
+        (priceRangeFilter === "" || checkPriceRange(property.price, priceRangeFilter))
+      );
+
+      const sortedProperties = filteredProperties.sort((a, b) => a.price - b.price);
+
+      const productList = document.getElementById("productList");
+      productList.innerHTML = "";
+
+      if (sortedProperties.length === 0) {
+        productList.innerHTML = "<p>Nenhum imóvel encontrado.</p>";
+      } else {
+        sortedProperties.forEach(property => {
+          const productCard = createProductCard(property);
+          productList.appendChild(productCard);
+        });
+      }
+    });
+
+  // Function to create elements HTML for each property card
+  function createProductCard(property) {
+    const productCard = document.createElement("div");
+    productCard.className = "product-card";
+
+    // ... (rest of the function code, as provided in your original code)
+
+    return productCard;
+  }
+
+  // Function to check if the property price is within the specified range
+  function checkPriceRange(price, range) {
+    const [min, max] = range.split("-").map(parseFloat);
+    if (isNaN(min) && isNaN(max)) {
+      return true;
+    }
+    if (isNaN(min)) {
+      return price <= max;
+    }
+    if (isNaN(max)) {
+      return price >= min;
+    }
+    return price >= min && price <= max;
+  }
+  </script>
+</body>
+</html>

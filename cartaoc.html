@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    body {
+        background: linear-gradient(135deg, #5a8d94, #7bcdee);
+    }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tornar o contêiner ocupar toda a altura da viewport */
+  }
+
+  .card {
+    width: 70%; /* Redefinir a largura do card para 70% da largura do contêiner */
+    height: 70%; /* Redefinir a altura do card para 70% da altura do contêiner */
+    max-width: 1000px; /* Definir uma largura máxima para o card */
+    max-height: 1500px; /* Definir uma altura máxima para o card */
+  }
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 24px;
+  }
+
+  .card-front {
+    background-color: #001F3F; /* Azul escuro */
+    transform: rotateY(0deg);
+  }
+
+  .card-back {
+    background-color: #001F3F; /* Azul escuro */
+    transform: rotateY(180deg);
+  }
+
+  .logo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 768px) { /* Aplique os estilos somente em telas menores que 768px de largura */
+    .card-inner {
+      transform: none; /* Remova a rotação em telas menores */
+    }
+    .card:hover .card-inner {
+      transform: none; /* Remova a rotação ao passar o mouse em telas menores */
+    }
+  }
+
+</style>
+</head>
+<body>
+<div class="card-container">
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+        <!-- Conteúdo da frente do card aqui -->
+        <img src="frente.png" alt="Logo" class="logo-image">
+      </div>
+      <div class="card-back">
+        <!-- Conteúdo do verso do card aqui -->
+        <img src="verso.png" alt="Logo" class="logo-image">
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<div class="card-container">
+  <div class="card">
+    <div class="card-inner">
+      <div class="card-front">
+          <img src="logo.png" alt="Logo" class="logo-image">
+          <div class="city-name">João Pessoa</div>
+          <div class="creci">CRECI - 1174J</div>
+      </div>
+      <div class="card-back">
+          <img src="cartao.png" alt="Logo" class="logo-image">
+          <div class="card-back-text">APROVAMOS SUA MORADIA PELO ZAP</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+  
+body {
+        background: linear-gradient(135deg, #5a8d94, #7bcdee);
+    }
+  
+.card-back-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #FFD700; /* Amarelo */
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+    .city-name {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ADD8E6; /* Azul claro */
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.creci {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #ffffff; /* Branco */
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-container {
+    perspective: 1000px;
+  }
+
+  .card {
+    width: 400px;
+    height: 200px;
+  }
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: 10px solid #001F3F; /* Azul escuro */
+    border-radius: 10px;
+    font-size: 24px;
+  }
+
+  .card-front {
+    background-color: #001F3F; /* Azul escuro */
+    transform: rotateY(0deg);
+  }
+
+  .card-back {
+    background-color: #001F3F; /* Azul escuro */
+    transform: rotateY(180deg);
+  }
+
+  .logo-image {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+</style>

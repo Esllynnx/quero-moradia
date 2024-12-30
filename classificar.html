@@ -1,0 +1,2299 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#006EDF">
+  <title>Imobiliária Quero Moradia</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+
+        <style>
+        .replaced-img {
+            max-width: 25px;
+            height: auto;
+            vertical-align: middle; /* Ajusta o alinhamento vertical da imagem */
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6');
+            images.forEach(element => {
+                element.innerHTML = element.innerHTML.replace(/"([^"]+\.(png|jpg|jpeg|gif))"/g, '<img src="$1" alt="Image" class="replaced-img">');
+            });
+        });
+    </script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding: 0;
+    }
+
+    .mobzen-navbar {
+      background-color: black;
+      color: white;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100000;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .mobzen-navbar.transparent {
+      background-color: transparent;
+    }
+
+    .navbar-logo {
+      margin-right: auto; /* Empurra o logo para o lado esquerdo */
+      display: flex;
+      align-items: center; /* Alinha verticalmente a imagem */
+    }
+
+    .navbar-logo img {
+      height: 100px; /* Define a altura da imagem */
+      width: auto; /* Mantém a proporção da imagem */
+    }
+
+    .mobzen-navbar a {
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .mobzen-navbar a i {
+      margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+    }
+
+    .mobzen-navbar a::after {
+      content: '';
+      position: absolute;
+      left: -100%;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ddd;
+      transition: all 0.3s ease;
+    }
+
+    .mobzen-navbar a:hover::after {
+      left: 0;
+    }
+
+    .mobzen-navbar a.active::after {
+      left: 0;
+      background-color: white;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .mobzen-navbar {
+        display: none;
+      }
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1001;
+      top: 0;
+      right: 0;
+      background-color: black;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 60px;
+    }
+
+    .sidenav a {
+      padding: 8px 16px;
+      text-decoration: none;
+      font-size: 16px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="mobzen-navbar" id="navbar">
+    <div class="navbar-logo">
+      <img src="slogan.webp" alt="Slogan">
+    </div>
+    <a style="font-family: Nobile;" href="#menu" onclick="openNav()"><i class="fa-solid fa-compass"></i>Abrir Menu</a>
+    <a style="font-family: Nobile;" href="favorito.html"><i class="fa-solid fa-heart"></i>Meus Favoritos</a>
+    <a style="font-family: Nobile;" href="classificar.html" class="active"><i class="fa-solid fa-magnifying-glass"></i>Buscar Imóveis</a>
+    <a style="font-family: Nobile; margin-right: 50px;" href="index.html"><i class="fa-solid fa-house"></i>Início</a>
+  </div>
+
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+  </style>
+
+  <script>
+
+
+    // Adiciona o ouvinte de evento de rolagem
+    window.addEventListener('scroll', handleScroll);
+
+    // Define o estado inicial da navbar com base na posição de rolagem atual
+    document.addEventListener('DOMContentLoaded', handleScroll);
+  </script>
+
+</body>
+
+</html>
+
+
+
+</body>
+</html>
+
+  
+    <!-- Seu código JavaScript aqui -->
+    <script>
+      var prevScrollpos = window.pageYOffset;
+  
+
+  
+
+    </script>
+  
+  <!-- Adiciona um botão para fechar o menu lateral -->
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+</body>
+</html>
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  <!-- NAVBAR PARA TELAS MENORES-->
+
+
+  <!DOCTYPE html>
+  <html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 10px 0;
+    color: #fff;
+    z-index: 99999999;
+    transition: transform 0.5s ease; /* Transição suave */
+}
+
+.navbar.hidden {
+    transform: translateY(100%); /* Move a navbar para fora da tela */
+}
+
+
+
+
+  
+      @media only screen and (max-width: 768px) {
+        .navbar {
+          transform: translateY(0);
+        }
+      }
+  
+      @media only screen and (min-width: 769px) {
+        .navbar {
+          display: none;
+        }
+      }
+  
+      .navbar a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: #232323;
+        border-radius: 10px;
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }  
+      .navbar a:hover {
+        background-color: white;
+        color: black;
+      }
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        z-index: 999999;
+      }
+  
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        font-family: 'Times New Roman', Times, serif;
+      }
+  
+      .sidebar a:hover {
+        color: #f1f1f1;
+      }
+  
+      .sidebar .closebtn {
+        position: absolute;
+        top: 50;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+  
+      @media only screen and (max-width: 768px) {
+        .sidebar {
+          width: 100%;
+        }
+      }
+  
+      .sidebar-closed {
+        width: 0;
+      }
+    </style>
+  </head>
+  
+  <body>
+  
+    <div class="navbar" id="navbar">
+      <a href="index.html"><i class="fa-solid fa-house"></i></a>
+      <a style="background-color: #fff; color: #000;" href="classificar.html"><i class="fa-solid fa-magnifying-glass"></i>
+      <a href="favorito.html"><i class="fa-solid fa-heart"></i></a>
+      <a href="javascript:void(0);" onclick="openNav()"><i class="fa-solid fa-compass"></i></a>
+    </div>
+
+    <script>
+      window.addEventListener('scroll', function() {
+          const navbar = document.querySelector('.navbar');
+          const scrollPosition = window.innerHeight + window.pageYOffset;
+          const documentHeight = document.documentElement.scrollHeight;
+  
+          // Verifica se o usuário rolou até o fim da página
+          if (scrollPosition >= documentHeight) {
+              navbar.classList.add('hidden'); // Esconde a navbar
+          } else {
+              navbar.classList.remove('hidden'); // Mostra a navbar
+          }
+      });
+  </script>
+  
+  
+  
+  
+  
+
+  
+  </body>
+  
+  </html>
+  
+  
+  <div style="text-align: left;" id="mySidebar" class="sidebar sidebar-closed">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  
+    <a style="margin-top: 50px;" href="Menu/contato.html">
+      <i class="fa fa-address-card" style="color: #818181; margin-right: 10px;"></i>Contato
+    </a>
+  
+    <a href="https://api.whatsapp.com/send?phone=5583986739013&text=Olá, vi o seu site e busco mais informações." target="_blank">
+      <i class="fa-solid fa-comments" style="color: #818181; margin-right: 10px;"></i>WhatsApp
+    </a>
+  
+    <hr>
+  
+    <a href="https://api.whatsapp.com/send?phone=5583986739013&text=Olá, quero passar minha carta de crédito, como prossigo?" target="_blank">
+      <i class="fa fa-envelope" style="color: #818181; margin-right: 10px;"></i>Passar Carta de Crédito
+    </a>
+  
+    <a href="https://api.whatsapp.com/send?phone=5583986739013&text=Olá, eu gostaria de agendar uma visita." target="_blank">
+      <i class="fa-solid fa-door-open" style="color: #818181; margin-right: 10px;"></i>Agendar Visita
+    </a>
+  
+    <a href="simulacao.html" target="_blank">
+      <i class="fa fa-laptop" style="color: #818181; margin-right: 10px;"></i>Fazer Simulação
+    </a>
+  
+    <hr>
+  
+    <a href="https://api.whatsapp.com/send?phone=5583986739013&text=Olá, eu gostaria de tirar uma dúvida." target="_blank">
+      <i class="fa fa-envelope" style="color: #818181; margin-right: 10px;"></i>Dúvida
+    </a>
+  
+    <hr>
+  
+    <a href="login.html" target="_blank">
+      <i class="fa fa-clipboard" style="color: #818181; margin-right: 10px;"></i>Anunciar Imóvel
+    </a>
+  </div>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0-beta3/css/all.min.css">
+  
+
+  
+    <script>
+      var ticking = false;
+      var lastScrollTop = 0;
+  
+  
+      function detectScroll() {
+        var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        var documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+  
+        if ((scrollPosition > 0 && scrollPosition < documentHeight) || (scrollPosition === 0 && !isScrollingDown())) {
+          showNavbar();
+        } else {
+          hideNavbar();
+        }
+  
+        lastScrollTop = scrollPosition;
+      }
+  
+      function isScrollingDown() {
+        return lastScrollTop < window.scrollY;
+      }
+  
+      function showNavbar() {
+        var navbar = document.getElementById('navbar');
+        navbar.style.transform = 'translateY(0)';
+      }
+  
+      function hideNavbar() {
+        var navbar = document.getElementById('navbar');
+        navbar.style.transform = 'translateY(100%)';
+      }
+  
+      function openNav() {
+    var sidebar = document.getElementById('mySidebar');
+
+    if (sidebar.classList.contains('sidebar-closed')) {
+      // Sidebar está fechada, então abra
+      sidebar.classList.remove('sidebar-closed');
+      sidebar.style.width = '100%';
+    } else {
+      // Sidebar já está aberta, então feche
+      closeNav();
+    }
+  }
+
+  function closeNav() {
+    var sidebar = document.getElementById('mySidebar');
+    if (!sidebar.classList.contains('sidebar-closed')) {
+      sidebar.style.width = '0';
+      sidebar.classList.add('sidebar-closed');
+    }
+  }
+    </script>
+  </body>
+  
+  </html>
+  
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+        @media screen and (min-width: 768px) {
+            /* Aplique apenas em telas maiores que 768 pixels de largura */
+            .espaço-superior {
+                height: 25%; /* 25% da altura da janela de visualização */
+            }
+        }
+  
+          /* Adicione estilos adicionais conforme necessário */
+      </style>
+      <title>Sua Página</title>
+  </head>
+  <body>
+      <div class="espaço-superior"></div>
+  
+      <!-- Conteúdo da sua página aqui -->
+  
+
+  
+      <!-- Mais elementos da página aqui -->
+  </body>
+  </html>
+  
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Meu Site</title>
+    <!-- Adicione a linha abaixo para configurar o ícone -->
+    <link rel="icon" href="logo.png" type="image/png">
+  </head>
+
+<body>
+  <!-- Conteúdo do seu site -->
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    if (!sessionStorage.getItem('pageReloaded')) {
+      sessionStorage.setItem('pageReloaded', 'true');
+      setTimeout(function () {
+        location.reload();
+      }, 100); // Aguarda 1 segundo antes de recarregar
+    } else {
+      sessionStorage.removeItem('pageReloaded');
+    }
+  </script>
+</head>
+
+<body>
+  <!-- O conteúdo da sua página aqui -->
+</body>
+
+</html>
+
+
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Busca de Imóvel</title>
+  <style>
+    .filters {
+      text-align: center;
+    }
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .form-group {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+
+
+    .options {
+      margin-top: 10px;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+    }
+
+    @media (max-width: 768px) {
+    .filters {
+      margin-top: 70px; /* Adiciona margem superior de 70px */
+    }
+  }
+  </style>
+</head>
+<body>
+  
+
+  <div class="filters" style="background-color: #fff;">
+    <h3 style="font-family: Raleway;">Buscar imóvel</h3>
+
+    
+  
+    <div class="form-group">
+        <select id="bedrooms">
+            <option value="">Escolha Quan. quartos</option>
+            <option value="1">1 Quarto</option>
+            <option value="2">2 Quartos</option>
+            <option value="3">3 Quartos</option>
+            <option value="4">4 Quartos</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+    </div>
+
+    <div class="form-group">
+        <select id="neighborhood">
+            <option value="">Escolha um bairro</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+    </div>
+
+    <div class="form-group">
+      <select id="propertyType">
+          <option value="">Escolha o imóvel</option>
+          <option value="Apartamento">Apartamento</option>
+          <option value="Casa">Casa</option>
+          <option value="Alto Padrão">Alto Padrão</option>
+          <option value="Condomínio">Condomínio</option>
+          <!-- Adicione mais opções conforme necessário -->
+      </select>
+  </div>
+  <div style="border: 0px; box-shadow: none;" class="form-group">
+    <button style="font-family: Raleway; width: 190px;" id="filterByDateButton" onclick="setActiveFilterToDate()">
+        <span>Procurar</span>
+        <img src="lupa.png" alt="Calendário" />
+    </button>
+</div>
+
+<script>
+    // Sua função de clique
+    function setActiveFilterToDate() {
+        // Código que você deseja executar quando o botão é clicado
+        console.log('Função setActiveFilterToDate chamada.');
+    }
+
+    // Simular o clique no botão ao carregar a página
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('filterByDateButton').click();
+    });
+</script>
+
+<div style="border: 0px; box-shadow: none;" class="form-group">
+  <button style="font-family: Raleway; width: 100px;" id="filterByDateButton" onclick="toggleCard()">
+      <span>Opções</span>
+  </button>
+</div>
+
+
+  <script>
+  window.onload = function() {
+      // Obtém o parâmetro 'tipo' da URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const tipo = urlParams.get('tipo');
+  
+      if (tipo) {
+          // Seleciona o tipo de imóvel no select
+          const selectElement = document.getElementById('propertyType');
+          selectElement.value = tipo;
+  
+          // Simula o clique no botão de procurar
+          document.getElementById('filterByDateButton').click();
+      }
+  }
+  </script>
+  
+  
+  
+    <!-- Caixa de seleção para ocultar imóveis vendidos -->
+
+  </div>
+
+<style>
+  #searchInput {
+    width: 280px; /* largura do campo de entrada */
+    padding: 10px; /* espaço interno */
+    border: 1px solid #ccc; /* borda */
+    border-radius: 5px; /* bordas arredondadas */
+    font-size: 16px; /* tamanho da fonte */
+    outline: none; /* remove o contorno ao focar */
+}
+
+#searchInput::placeholder {
+    color: #999; /* cor do texto de placeholder */
+}
+
+</style>
+
+
+</body>
+</html>
+
+
+
+
+</body>
+</html>
+
+
+
+  <!-- Adicione o botão "Procurar" -->
+  <style>
+    #searchButton {
+      padding: 5px 40px 5px 10px;
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "Arial", sans-serif;
+      /* Movido para cá */
+      font-weight: bold;
+      /* Movido para cá */
+    }
+
+    #searchButton img {
+      width: 28px;
+      height: 28px;
+      margin-left: 11px;
+    }
+  </style>
+  </head>
+
+  <body>
+
+
+
+
+
+
+    <!-- Restante do corpo... -->
+
+    <!-- Restante do cabeçalho... -->
+    <style>
+      #searchButton,
+      #filterByDateButton {
+        padding: 5px 40px 5px 10px;
+        background-color: #f0f0f0;
+        border: none;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Arial", sans-serif;
+        font-weight: bold;
+        margin: 10px 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #searchButton img,
+      #filterByDateButton img {
+        width: 28px;
+        height: 28px;
+        margin-left: 11px;
+      }
+
+      #searchButton:hover,
+      #filterByDateButton:hover {
+        background-color: #000000;
+      }
+
+      #searchButton:active,
+      #filterByDateButton:active {
+        background-color: #000000;
+      }
+    </style>    </head>
+
+    
+
+    <body>
+      <!-- Restante do corpo... -->
+
+
+
+      <!DOCTYPE html>
+      <html lang="en">
+
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mini Card</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+          }
+
+          .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 4;
+          }
+
+          @keyframes entryAnimation {
+            0% {
+              opacity: 0;
+
+            }
+
+            100% {
+              opacity: 1;
+
+            }
+          }
+
+          @keyframes explosionAnimation {
+            0% {}
+
+            50% {}
+
+            100% {}
+          }
+
+          .card {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  height: 420px;
+  text-align: center;
+  position: absolute;
+  top: 100%; /* Inicialmente fora da tela */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0; /* Inicialmente invisível */
+  animation: slideInFromBottom 0.5s ease-out forwards; /* Animação de entrada */
+}
+
+/* Animação de entrada */
+@keyframes slideInFromBottom {
+  from {
+    transform: translate(-50%, 100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+/* Animação de saída */
+@keyframes slideOutToBottom {
+  from {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    opacity: 1;
+  }
+  to {
+    transform: translate(-50%, 100%);
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+
+
+          .options {
+            cursor: pointer;
+          }
+
+          .number {
+            cursor: pointer;
+            display: inline-block;
+            padding: 5px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 40px;
+            border-radius: 0px;
+          }
+
+          .selected {
+            background-color: #a0d3ff;
+            /* Change the color as needed */
+          }
+
+          /* Restante do seu CSS */
+
+          .card {
+            position: relative;
+            /* Adicionado para posicionar o botão "x" */
+          }
+
+          .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-weight: bold;
+            font-size: 25px;
+            cursor: pointer;
+            color: #555;
+          }
+          /* Restante do seu CSS */
+        </style>
+      </head>
+
+      <body>
+        <div class="overlay" id="overlay" onclick="closeCard(event)">
+          <div class="card">
+            <i class="fa-solid fa-xmark" style="color: #000000; position: absolute; top: 10px; right: 10px; font-size: 24px;" onclick="closeCardFromButton()"></i>
+
+            <div style="font-family: Raleway;" class="form-group">
+              <label style="font-family: Raleway;" for="priceRange"></label>
+              <select id="priceRange">
+                <option style="font-family: Raleway;" value="">Selecionar Preço</option>
+                <option value="0-150000">De R$0 a R$150.000</option>
+                <option value="250000-400000">De R$250.000 até R$400.000</option>
+                <option value="400000-650000">De R$400.000 até R$650.000</option>
+                <option value="650000-1100000">De R$650.000 até R$1.100.000</option>
+                <option value="1100000+">De +R$1.100.000</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom: 5px;" class="image-container">
+              <p style="font-family: Raleway;"></p>
+              <img src="banheirinha.png" alt="Imagem" class="image">
+              <div class="number-selection">
+                <div class="number" id="suite1" onclick="selectNumber(this)">1</div>
+                <div class="number" id="suite2" onclick="selectNumber(this)">2</div>
+                <div class="number" id="suite3" onclick="selectNumber(this)">3</div>
+                <div class="number" id="suite4" onclick="selectNumber(this)">4</div>
+              </div>
+            </div>
+            <div class="image-container">
+              <p style="font-family: Raleway;"></p>
+              <img src="carrinho.png" alt="Imagem" class="image">
+              <div class="number-selection">
+                <div class="number" id="garage1" onclick="selectGarage(this)">1</div>
+                <div class="number" id="garage2" onclick="selectGarage(this)">2</div>
+                <div class="number" id="garage3" onclick="selectGarage(this)">3+</div>
+              </div>
+            </div>
+            <div style="margin-top: 40px;" class="form-group">
+              <input type="checkbox" id="hideSoldCheckbox">
+              <label style="font-family: Raleway;" for="hideSoldCheckbox">Ocultar imóveis vendidos</label>
+          </div>
+
+          <div class="input-container">
+            <input style="font-family: Raleway; border-radius: 0px;" type="text" id="searchInput" placeholder="Pesquise pelo Bairro manualmente...">
+            <div style="font-family: Raleway;" id="suggestionsCard" class="suggestions-card"></div>
+        </div>
+
+
+        <button style="font-family: Raleway; width: 280px; border-radius: 0px 0px 14px 14px;" id="searchButton" onclick="setActiveFilterToPrice()">
+          <span>Menor Preço</span>
+          <img src="lupa.png" alt="Lupa" />
+      </button>
+      
+
+          </div>
+        </div>
+
+        <script>
+          function closeCard(event) {
+            if (event.target.id === 'overlay') {
+              const overlay = document.getElementById('overlay');
+              overlay.style.display = "none";
+              clearSelection();
+            }
+          }
+
+          function closeCardFromButton() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = "none";
+            clearSelection();
+          }
+
+          function clearSelection() {
+            // Coloque aqui a lógica para limpar as seleções, se necessário
+          }
+        </script>
+
+        <script>
+          let selectedNumber = null;
+
+          function toggleCard() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = "flex";
+          }
+
+          function closeCard(event) {
+            if (event.target.id === 'overlay') {
+              const overlay = document.getElementById('overlay');
+              overlay.style.display = "none";
+              clearSelection();
+            }
+          }
+
+          function selectNumber(element) {
+            if (selectedNumber) {
+              selectedNumber.classList.remove('selected');
+            }
+            selectedNumber = element;
+            selectedNumber.classList.add('selected');
+
+            // Atualiza a lista automaticamente ao selecionar o número de suítes
+            updateProductList();
+          }
+
+          function clearSelection() {
+            if (selectedNumber) {
+              selectedNumber.classList.remove('selected');
+              selectedNumber = null;
+            }
+          }
+
+          // Esconder o card ao carregar a página
+          window.addEventListener("load", function () {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = "none";
+          });
+
+          document.addEventListener("DOMContentLoaded", () => {
+            updateNeighborhoodOptions();
+          });
+
+          function updateProductList() {
+            const bedroomsFilter = document.getElementById("bedrooms").value;
+            const neighborhoodFilter = document.getElementById("neighborhood").value;
+            const propertyTypeFilter = document.getElementById("propertyType").value;
+            const priceRangeFilter = document.getElementById("priceRange").value;
+            const productList = document.getElementById("productList");
+
+            productList.innerHTML = "";
+
+            const selectedSuites = selectedNumber ? parseInt(selectedNumber.textContent) : null;
+
+            const filteredProperties = properties.filter(property =>
+              (bedroomsFilter === "" || property.bedrooms === parseInt(bedroomsFilter)) &&
+              (neighborhoodFilter === "" || property.neighborhood === neighborhoodFilter) &&
+              (propertyTypeFilter === "" || property.classification === propertyTypeFilter) &&
+              (priceRangeFilter === "" || checkPriceRange(property.price, priceRangeFilter)) &&
+              (!selectedSuites || property.suites === selectedSuites)
+            );
+
+            const sortedProperties = filteredProperties.sort((a, b) => a.price - b.price);
+
+            if (sortedProperties.length === 0) {
+              productList.innerHTML = "<p>Nenhum imóvel encontrado.</p>";
+            } else {
+              sortedProperties.forEach(property => {
+                const productCard = createProductCard(property);
+                productList.appendChild(productCard);
+              });
+            }
+          }
+
+          let selectedGarage = null;
+
+          function selectGarage(element) {
+            if (selectedGarage) {
+              selectedGarage.classList.remove('selected');
+            }
+            selectedGarage = element;
+            selectedGarage.classList.add('selected');
+
+            // Atualiza a lista automaticamente ao selecionar o número de garagem
+            updateProductList();
+          }
+          function setActiveFilterToDate() {
+            activeFilter = "date"; // Ativar o filtro por data
+            updateProductList(); // Atualizar a lista de imóveis com base no filtro ativo
+          }
+
+        </script>
+
+
+
+
+      </body>
+
+      </html>
+
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f0f0f0;
+        }
+
+        .image-container {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .image {
+          width: 30px;
+          height: 30px;
+          border-radius: 5px;
+        }
+
+        .number-selection {
+          display: flex;
+          gap: 5px;
+        }
+
+        .number {
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 8px;
+          padding: 2px 5px;
+          font-size: 12px;
+          cursor: pointer;
+        }
+
+        .number.selected {
+          border: 2px solid #007bff;
+        }
+      </style>
+    </body>
+
+    </html>
+
+
+
+
+  </body>
+
+  </html>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Adicione um ouvinte de evento ao botão "Filtrar por data"
+      document.getElementById("filterByDateButton").addEventListener("click", updateProductList);
+
+      // Sua função updateProductList e outras funções aqui
+    });
+  </script>
+  </body>
+
+  </html>
+
+
+
+
+  </body>
+
+  </html>
+
+
+
+</div>
+
+<div class="product-list" id="productList">
+  <!-- Aqui serão listados os imóveis filtrados -->
+</div>
+
+
+<style>
+  /* Reset de estilos */
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Definições gerais */
+  body {
+    font-family: 'Luxia Regular', 'Minion Pro Regular', sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    /* Cor de fundo branca */
+  }
+
+
+  /* Formulário */
+  select {
+    width: 220px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    /* Cantos mais arredondados */
+    display: block;
+    margin: 5px 0;
+  }
+
+  option {
+    padding: 8px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  option:checked {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  #searchButton,
+  #filterByDateButton {
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    /* Distância de 30px acima e abaixo */
+    width: 220px;
+    transition: background-color 0.3s ease;
+  }
+
+  #searchButton:hover {
+    background-color: #0e0e0e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #searchButton:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+  }
+
+
+  /* Container do título */
+  .title-container {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-family: "Arial", sans-serif;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #333;
+  }
+
+  /* Cartão de produto */
+  .product-card {
+    width: 310px;
+    background-color: #fff;
+    overflow: hidden;
+    margin: 10px auto 20px !important;
+    position: relative;
+    border: 1px solid transparent; /* Borda inicial transparente para não afetar o layout */
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 0 10px black; /* Aplica a sombra preta ao passar o cursor */
+}
+
+
+    /* Estilos adicionados para a borda, sombra e pontas arredondadas */
+
+    /* Borda */
+
+    /* Sombra */
+
+    /* Pontas arredondadas nas partes inferiores */
+  
+
+  /* Adicione o restante dos estilos conforme necessário */
+
+
+
+/* Media query para telas maiores (exemplo: largura mínima de 768px) */
+
+
+
+
+
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+    transform: scale(1.05); /* Aumenta levemente a imagem em 5% */
+}
+
+
+  /* Estilos para a tag */
+  .product-card {
+    position: relative;
+  }
+
+  .product-image-container {
+    position: relative;
+  }
+
+  .property-tag {
+    background-color: blue;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+    /* Aumentar o z-index para que a tag fique visível */
+  }
+
+  .note {
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    padding: 8px;
+    background-color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+  @media screen and (max-width: 980px) {
+    .note {
+      font-size: 12px;
+    }
+  }
+
+
+  /* Ajustar posição da tag */
+  .product-card .property-tag {
+    transform: none;
+    /* Remover a transformação anterior */
+  }
+
+  /* Estilos para o nome */
+  .product-name {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+
+  .product-price {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .product-name {
+    font-size: 20px;
+    margin-top: 10px;
+    text-align: left;
+    font-family: Raleway;
+    /* Fonte em negrito para as classes em vermelho */
+    padding: 0 10px;
+    /* Adiciona um espaçamento lateral */
+  }
+
+
+  /* Responsividade */
+  @media screen and (max-width: 980px) {
+    .product-card {
+      margin: 10px auto;
+    }
+
+    .product-image {
+      width: 100%;
+    }
+  }
+
+  /* Restante do código... */
+
+
+  /* Detalhes do produto */
+  .product-details {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px;
+    padding: 0 10px;
+    /* Adiciona um espaçamento lateral */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .detail-container {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  .detail-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+
+
+
+  /* ... Outros estilos ... */
+
+  .favorite-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 210px;
+    /* Ajuste a posição vertical conforme necessário */
+    right: 10px;
+    transition: transform 1s ease;
+  }
+
+  .favorite-icon:hover {
+    transform: scale(1.1);
+  }
+
+  /* ... Outros estilos ... */
+
+
+  /* Restante do CSS... */
+  /* Atualize esses estilos no seu arquivo de CSS */
+  .product-card {
+    position: relative;
+  }
+
+/* Adicione este trecho ao seu código CSS existente */
+.product-image-container {
+    position: relative;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Objective+Regular&display=swap');
+
+
+.price-rectangle {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #000000;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    padding: 6px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+
+
+
+  /* Estilo para o bairro */
+  .product-neighborhood {
+    color: #707070;
+    /* Cor preta clara */
+    font-size: 17px;
+  }
+
+  /* Estilo para o texto "João Pessoa - PB" */
+  .city-text {
+    color: #707070;
+    /* Cor preta clara */
+    font-size: 17px;
+  }
+
+  /* Estilos para a descrição do filtro */
+  .filter-description {
+    font-size: 20px;
+  }
+
+  .filter-description>span {
+    color: #ff0000;
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+
+  /* Estilos para as classes em vermelho */
+  .class-red {
+    color: red;
+    font-weight: bold;
+  }
+
+  /* Estilos para tornar o layout responsivo */
+  @media (max-width: 768px) {
+    body {
+      font-size: 20px;
+    }
+  }
+
+  .separator {
+    border: none;
+    border-top: 1px solid rgba(82, 82, 82, 0.76);
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escurecida */
+}
+
+.product-card {
+    position: relative; /* Define a posição como relativa para que os elementos absolutos sejam posicionados corretamente */
+}
+
+.sold-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 53%);
+    z-index: 1; /* Certifica-se de que a sobreposição fique acima do conteúdo do card */
+}
+
+.product-card.sold .sold-overlay {
+    display: none; /* Oculta a sobreposição quando o card estiver vendido */
+}
+
+.product-card.sold .product-image {
+    filter: brightness(30%); /* Reduz a luminosidade da imagem para 30%, escurecendo-a */
+}
+
+.sold-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg); /* Adiciona rotação de -45 graus */
+    color: #fff; /* Cor do texto */
+    font-size: 24px; /* Tamanho do texto */
+    z-index: 1; /* Certifica-se de que o texto fique acima do conteúdo escurecido */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+</style>
+
+<link rel="stylesheet" href="classificar.css">
+
+<script>
+  // Defina os seus imóveis em um array ou carregue-os de uma fonte de dados externa
+  const properties = [
+    {
+      id: 1,
+      image: "venda fotos/venda1 (1).webp",
+      name: "Apartamento Zero de Entrada",
+      bedrooms: 2,
+      suites: 2,
+      garage: 1,
+      neighborhood: "Novo Milênio - João Pessoa",
+      price: 149990,
+      classification: "Apartamento",
+      city: ""
+    },
+    {
+      id: 2,
+      image: "venda fotos/venda2 (1).webp",
+      name: "Casas com designer contemporâneo localizado na Praia Ponta de Campina",
+      bedrooms: 3,
+      suites: 3,
+      garage: 1,
+      neighborhood: "Ponta de Campina - Cabedelo",
+      price: 929000,
+      classification: "Casa",
+      city: ""
+    },
+
+  ];
+
+  // Adicione mais imóveis conforme necessário
+
+  // Event listener para o campo de número de quartos
+  document.addEventListener("DOMContentLoaded", () => {
+    updateNeighborhoodOptions(); // Chamada inicial para atualizar as opções de bairro
+
+    document.getElementById("bedrooms").addEventListener("change", updateNeighborhoodOptions);
+    document.getElementById("searchButton").addEventListener("click", updateProductList);
+    document.getElementById("minPrice").addEventListener("input", updateProductList); // Adicione o ouvinte de evento ao campo minPrice
+    document.getElementById("maxPrice").addEventListener("input", updateProductList); // Adicione o ouvinte de evento ao campo maxPrice
+    document.getElementById("hideSoldCheckbox").addEventListener("change", updateProductList); // Adicione o ouvinte de evento para a checkbox
+});
+
+
+
+function updateNeighborhoodOptions() {
+    const selectedBedrooms = document.getElementById("bedrooms").value;
+    const neighborhoodSelect = document.getElementById("neighborhood");
+
+    // Limpa as opções existentes
+    neighborhoodSelect.innerHTML = "";
+
+    // Adiciona a opção padrão
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.textContent = "Escolha o bairro";
+    neighborhoodSelect.appendChild(defaultOption);
+
+    // Filtra os bairros com imóveis que correspondem ao número de quartos selecionado
+    const filteredProperties = properties.filter(
+        property =>
+            selectedBedrooms === "" || property.bedrooms === parseInt(selectedBedrooms)
+    );
+
+    const neighborhoodCounts = {};
+
+    filteredProperties.forEach(property => {
+        if (!neighborhoodCounts[property.neighborhood]) {
+            neighborhoodCounts[property.neighborhood] = 0;
+        }
+        neighborhoodCounts[property.neighborhood]++;
+    });
+
+    const filteredNeighborhoods = Object.keys(neighborhoodCounts);
+
+    // Adiciona as opções de bairros filtrados ao campo de seleção
+    filteredNeighborhoods.forEach(neighborhood => {
+        const option = document.createElement("option");
+        option.value = neighborhood;
+        option.textContent = `${neighborhood} (${neighborhoodCounts[neighborhood]})`;
+        neighborhoodSelect.appendChild(option);
+    });
+
+
+function updateProductList() {
+    const bedroomsFilter = document.getElementById("bedrooms").value;
+    const neighborhoodFilter = document.getElementById("neighborhood").value;
+    const propertyTypeFilter = document.getElementById("propertyType").value;
+    const priceRangeFilter = document.getElementById("priceRange").value;
+    const hideSold = document.getElementById("hideSoldCheckbox").checked; // Verifica se a caixa de seleção está marcada
+    const productList = document.getElementById("productList");
+
+    const filteredProperties = properties.filter(property =>
+        (bedroomsFilter === "" || property.bedrooms === parseInt(bedroomsFilter)) &&
+        (neighborhoodFilter === "" || property.neighborhood === neighborhoodFilter) &&
+        (propertyTypeFilter === "" || property.classification === propertyTypeFilter) &&
+        (priceRangeFilter === "" || checkPriceRange(property.price, priceRangeFilter)) &&
+        (!property.sold || !hideSold) // Verifica se o imóvel está vendido e se a caixa de seleção de ocultar vendidos está marcada
+    );
+
+    productList.innerHTML = ""; // Limpa o conteúdo existente
+
+    filteredProperties.forEach(property => {
+        const productCard = createProductCard(property);
+        productList.appendChild(productCard);
+    });
+}
+
+    productList.innerHTML = ""; // Clear the existing content
+
+    const batchSize = 10; // Number of properties to load at once
+    const endIndex = Math.min(displayedProperties + batchSize, filteredProperties.length);
+
+    for (let i = displayedProperties; i < endIndex; i++) {
+        const property = filteredProperties[i];
+        const productCard = createProductCard(property);
+        productList.appendChild(productCard);
+    }
+
+    displayedProperties = endIndex; // Update the displayed properties counter
+
+    if (displayedProperties < filteredProperties.length) {
+        // If there are more properties to load, add an event listener to load more on scroll
+        window.addEventListener("scroll", lazyLoadMoreProperties);
+    }
+}
+
+function lazyLoadMoreProperties() {
+    // Calculate the remaining distance to the bottom of the page
+    const distanceToBottom = document.documentElement.offsetHeight - (window.scrollY + window.innerHeight);
+
+    // Load more properties if the user is close to the bottom
+    if (distanceToBottom < 100) {
+        window.removeEventListener("scroll", lazyLoadMoreProperties); // Remove the event listener temporarily
+        updateProductList(); // Load more properties
+    }
+}
+
+function checkPriceRange(price, range) {
+    const [min, max] = range.split("-").map(parseFloat);
+    if (isNaN(min) && isNaN(max)) {
+        return true;
+    }
+    if (isNaN(min)) {
+        return price <= max;
+    }
+    if (isNaN(max)) {
+        return price >= min;
+    }
+    return price >= min && price <= max;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    updateNeighborhoodOptions();
+
+    const searchInput = document.getElementById("searchInput");
+    const suggestionsCard = document.getElementById("suggestionsCard");
+
+    // Adiciona um ouvinte de evento ao campo de entrada
+    searchInput.addEventListener("input", function() {
+        const searchTerm = this.value.trim().toLowerCase(); // Obtém o termo de pesquisa e padroniza
+        updateSuggestions(searchTerm); // Atualiza as sugestões com base no termo de pesquisa
+        filterAndDisplayProperties(searchTerm); // Filtra e exibe os imóveis com base no termo de pesquisa
+    });
+
+    // Adiciona um ouvinte de evento para lidar com o clique nas sugestões
+    suggestionsCard.addEventListener("click", function(event) {
+        const clickedSuggestion = event.target.textContent; // Obtém o texto da sugestão clicada
+        searchInput.value = clickedSuggestion; // Preenche o input com a sugestão clicada
+        suggestionsCard.style.display = "none"; // Oculta o card de sugestões
+        filterAndDisplayProperties(clickedSuggestion); // Filtra e exibe os imóveis com base na sugestão clicada
+    });
+
+    // Adiciona um ouvinte de evento para fechar o card flutuante quando clicar fora dele
+    document.addEventListener("click", function(event) {
+        if (!event.target.matches("#suggestionsCard") && !event.target.matches("#searchInput")) {
+            suggestionsCard.style.display = "none";
+        }
+    });
+});
+
+function filterAndDisplayProperties(searchTerm) {
+    const productList = document.getElementById("productList");
+    const filteredProperties = filterPropertiesByLocation(searchTerm); // Filtra os imóveis pela localidade
+
+    productList.innerHTML = ""; // Limpa a lista de imóveis exibida
+
+    if (filteredProperties.length === 0) {
+        productList.innerHTML = "<p></p>"; // Exibe uma mensagem se nenhum imóvel coincidir
+    } else {
+        filteredProperties.forEach(property => {
+            const productCard = createProductCard(property);
+            productList.appendChild(productCard);
+        });
+    }
+}
+
+function filterPropertiesByLocation(searchTerm) {
+    if (!searchTerm) {
+        return properties; // Retorna todos os imóveis se o termo de pesquisa estiver vazio
+    }
+
+    const standardizedSearchTerm = searchTerm.toLowerCase(); // Padroniza o termo de pesquisa
+
+    return properties.filter(property => {
+        // Padroniza o bairro do imóvel para comparar de forma consistente
+        const standardizedNeighborhood = property.neighborhood.toLowerCase();
+        // Verifica se o bairro do imóvel contém o termo de pesquisa padronizado
+        return standardizedNeighborhood.includes(standardizedSearchTerm);
+    });
+}
+
+function updateNeighborhoodOptions() {
+    const neighborhoodsDropdown = document.getElementById("neighborhoodsDropdown");
+    const searchInput = document.getElementById("searchInput");
+
+    searchInput.addEventListener("focus", () => {
+        neighborhoodsDropdown.style.display = "block";
+    });
+
+    searchInput.addEventListener("input", () => {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        const filteredNeighborhoods = getFilteredNeighborhoods(searchTerm);
+        displayNeighborhoodOptions(filteredNeighborhoods);
+    });
+}
+
+function getFilteredNeighborhoods(searchTerm) {
+    return neighborhoods.filter(neighborhood =>
+        neighborhood.toLowerCase().includes(searchTerm)
+    );
+}
+
+function displayNeighborhoodOptions(neighborhoods) {
+    const neighborhoodsDropdown = document.getElementById("neighborhoodsDropdown");
+    neighborhoodsDropdown.innerHTML = "";
+
+    if (neighborhoods.length === 0) {
+        neighborhoodsDropdown.style.display = "none";
+        return;
+    }
+
+    neighborhoods.forEach(neighborhood => {
+        const option = document.createElement("div");
+        option.textContent = neighborhood;
+        option.classList.add("neighborhood-option");
+
+        option.addEventListener("click", () => {
+            const searchInput = document.getElementById("searchInput");
+            searchInput.value = neighborhood;
+            neighborhoodsDropdown.style.display = "none";
+            filterAndDisplayProperties(neighborhood); // Atualiza a pesquisa e exibe os imóveis correspondentes
+        });
+
+        neighborhoodsDropdown.appendChild(option);
+    });
+}
+
+
+function updateSuggestions(searchTerm) {
+    const suggestionsCard = document.getElementById("suggestionsCard");
+    const neighborhoodSuggestions = getMatchingNeighborhoods(searchTerm); // Obtém as sugestões correspondentes ao termo de pesquisa
+
+    if (neighborhoodSuggestions.length === 0) {
+        suggestionsCard.style.display = "none"; // Oculta o card de sugestões se não houver sugestões
+        return;
+    }
+
+    // Limpa as sugestões anteriores
+    suggestionsCard.innerHTML = "";
+
+    // Cria e adiciona elementos de sugestão ao card de sugestões
+    const ul = document.createElement("ul");
+    neighborhoodSuggestions.forEach(suggestion => {
+        const li = document.createElement("li");
+        li.textContent = suggestion;
+        ul.appendChild(li);
+    });
+    suggestionsCard.appendChild(ul);
+
+    suggestionsCard.style.display = "block"; // Exibe o card de sugestões
+}
+
+function getMatchingNeighborhoods(searchTerm) {
+    if (!searchTerm) {
+        return []; // Retorna uma lista vazia se o termo de pesquisa estiver vazio
+    }
+
+    const standardizedSearchTerm = searchTerm.toLowerCase(); // Padroniza o termo de pesquisa
+
+    const allNeighborhoods = properties.map(property => property.neighborhood.toLowerCase());
+    const uniqueNeighborhoods = [...new Set(allNeighborhoods)]; // Remove duplicatas
+
+    return uniqueNeighborhoods.filter(neighborhood => neighborhood.includes(standardizedSearchTerm));
+}
+
+
+function createProductCard(property) {
+    const productCard = document.createElement("div");
+    productCard.className = "product-card";
+
+    if (property.sold) {
+        const soldOverlay = document.createElement("div");
+        soldOverlay.className = "sold-overlay"; // Classe para escurecer o card quando estiver vendido
+        productCard.appendChild(soldOverlay);
+
+        const soldText = document.createElement("div");
+        soldText.className = "sold-text"; // Classe para o texto "Vendido"
+        soldText.innerText = "Vendido";
+        productCard.appendChild(soldText); // Adiciona o texto "Vendido" ao card
+    }
+
+    // Adiciona o restante dos elementos do card
+
+    if (property.tag) {
+        const tag = document.createElement("div");
+        tag.className = "property-tag";
+        tag.innerText = property.tag;
+        productCard.appendChild(tag);
+    }
+
+    const productLink = document.createElement("a");
+    productLink.href = `venda${property.id}.html`;
+
+    const productImageContainer = document.createElement("div");
+    productImageContainer.className = "product-image-container";
+
+    const productImage = document.createElement("img");
+    productImage.className = "product-image";
+    productImage.src = property.image;
+    productImage.alt = property.name;
+
+    productImageContainer.appendChild(productImage);
+
+    // Adição do retângulo quase transparente com o preço
+    const priceRectangle = document.createElement("div");
+    priceRectangle.className = "price-rectangle";
+    priceRectangle.innerText = `R$ ${property.price.toLocaleString()}`;
+    productImageContainer.appendChild(priceRectangle);
+
+    if (property.note) {
+        const note = document.createElement("div");
+        note.className = "note";
+        note.innerText = property.note;
+        productImageContainer.appendChild(note);
+    }
+
+    productLink.appendChild(productImageContainer);
+
+    const productName = document.createElement("div");
+    productName.className = "product-name";
+    productName.innerText = property.name;
+
+    const productNeighborhood = document.createElement("div");
+    productNeighborhood.className = "product-neighborhood";
+    productNeighborhood.innerText = property.neighborhood;
+
+    const cityText = document.createElement("div");
+    cityText.className = "city-text";
+    cityText.innerText = `${property.city} `;
+    productNeighborhood.appendChild(cityText);
+
+    productName.appendChild(productNeighborhood);
+
+    const productDetails = document.createElement("div");
+    productDetails.className = "product-details";
+
+    const details = [
+        { label: "Quartos", icon: "caminha.png", value: property.bedrooms },
+        { label: "Suíte", icon: "banheirinha.png", value: property.suites },
+        { label: "Garagem", icon: "carrinho.png", value: property.garage },
+    ];
+
+    details.forEach(detail => {
+        const detailContainer = document.createElement("div");
+        detailContainer.className = "detail-container";
+
+        const icon = document.createElement("img");
+        icon.src = detail.icon;
+        icon.alt = detail.label;
+        icon.className = "detail-icon";
+        icon.style.width = "20px";
+        icon.style.height = "20px";
+
+        const value = document.createElement("span");
+        value.className = "detail-value";
+        value.innerText = detail.value;
+
+        detailContainer.appendChild(icon);
+        detailContainer.appendChild(value);
+        detailContainer.style.marginRight = "10px";
+
+        productDetails.appendChild(detailContainer);
+    });
+
+    const favoriteIcon = document.createElement("img");
+    favoriteIcon.src = isFavorite(property.id) ? "coração.png" : "coraçãozinho.png";
+    favoriteIcon.alt = "Favorito";
+    favoriteIcon.className = "favorite-icon";
+    favoriteIcon.style.width = "30px";
+    favoriteIcon.style.float = "right";
+
+    favoriteIcon.addEventListener("click", () => toggleFavorite(property, favoriteIcon));
+
+    productCard.appendChild(productLink);
+    productCard.appendChild(productDetails);
+    productCard.appendChild(productName);
+    productCard.appendChild(favoriteIcon);
+
+    return productCard;
+}
+
+
+
+
+  function toggleFavorite(property, favoriteIcon) {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const propertyIndex = favorites.findIndex(item => item.id === property.id);
+
+    if (propertyIndex !== -1) {
+      favorites.splice(propertyIndex, 1);
+      favoriteIcon.src = "coraçãozinho.png";
+    } else {
+      favorites.push(property);
+      favoriteIcon.src = "coração.png";
+    }
+
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }
+
+  function isFavorite(propertyId) {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    return favorites.some(favorite => favorite.id === propertyId);
+  }
+
+  document.getElementById("searchButton").addEventListener("click", updateProductList);
+
+
+  function updateNeighborhoodOptions() {
+    const selectedBedrooms = document.getElementById("bedrooms").value;
+    const neighborhoodSelect = document.getElementById("neighborhood");
+
+    // Limpa as opções existentes
+    neighborhoodSelect.innerHTML = "";
+
+    // Adiciona a opção padrão
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.textContent = "Escolha o bairro";
+    neighborhoodSelect.appendChild(defaultOption);
+
+    // Filtra os bairros com imóveis que correspondem ao número de quartos selecionado
+    const filteredProperties = properties.filter(
+      property =>
+        selectedBedrooms === "" || property.bedrooms === parseInt(selectedBedrooms)
+    );
+
+    const neighborhoodCounts = {};
+
+    filteredProperties.forEach(property => {
+      if (!neighborhoodCounts[property.neighborhood]) {
+        neighborhoodCounts[property.neighborhood] = 0;
+      }
+      neighborhoodCounts[property.neighborhood]++;
+    });
+
+    const filteredNeighborhoods = Object.keys(neighborhoodCounts);
+
+    // Ordenar os bairros em ordem alfabética
+    filteredNeighborhoods.sort();
+
+    // Adicionar as opções de bairros filtrados e ordenados ao campo de seleção
+    filteredNeighborhoods.forEach(neighborhood => {
+      const option = document.createElement("option");
+      option.value = neighborhood;
+      option.textContent = `${neighborhood} (${neighborhoodCounts[neighborhood]})`;
+      neighborhoodSelect.appendChild(option);
+    });
+  }
+
+  function updateProductList() {
+    const bedroomsFilter = document.getElementById("bedrooms").value;
+    const neighborhoodFilter = document.getElementById("neighborhood").value;
+    const propertyTypeFilter = document.getElementById("propertyType").value;
+    const priceRangeFilter = document.getElementById("priceRange").value;
+    const productList = document.getElementById("productList");
+
+    productList.innerHTML = "";
+
+    const selectedSuites = selectedNumber ? parseInt(selectedNumber.textContent) : null;
+    const selectedGarageCount = selectedGarage ? parseInt(selectedGarage.textContent) : null;
+
+    const filteredProperties = properties.filter(property =>
+      (bedroomsFilter === "" || property.bedrooms === parseInt(bedroomsFilter)) &&
+      (neighborhoodFilter === "" || property.neighborhood === neighborhoodFilter) &&
+      (propertyTypeFilter === "" || property.classification === propertyTypeFilter) &&
+      (priceRangeFilter === "" || checkPriceRange(property.price, priceRangeFilter)) &&
+      (!selectedSuites || property.suites === selectedSuites) &&
+      (!selectedGarageCount || property.garage === selectedGarageCount)
+    );
+
+    const sortedProperties = filteredProperties.sort((a, b) => a.price - b.price);
+
+    if (sortedProperties.length === 0) {
+      productList.innerHTML = "<p>Nenhum imóvel encontrado.</p>";
+    } else {
+      sortedProperties.forEach(property => {
+        const productCard = createProductCard(property);
+        productList.appendChild(productCard);
+      });
+    }
+  }
+
+
+  // Defina uma variável global para rastrear o filtro ativo
+  // Defina uma variável global para rastrear o filtro ativo
+  let activeFilter = "none"; // Inicialmente nenhum filtro ativo
+
+
+  // Função para atualizar a lista de produtos com base no filtro ativo
+  function updateProductList() {
+    const bedroomsFilter = document.getElementById("bedrooms").value;
+    const neighborhoodFilter = document.getElementById("neighborhood").value;
+    const propertyTypeFilter = document.getElementById("propertyType").value;
+    const priceRangeFilter = document.getElementById("priceRange").value;
+    const productList = document.getElementById("productList");
+
+    productList.innerHTML = "";
+
+    const selectedSuites = selectedNumber ? parseInt(selectedNumber.textContent) : null;
+    const selectedGarageCount = selectedGarage ? parseInt(selectedGarage.textContent) : null;
+
+    let filteredProperties = properties.filter(property =>
+      (bedroomsFilter === "" || property.bedrooms === parseInt(bedroomsFilter)) &&
+      (neighborhoodFilter === "" || property.neighborhood === neighborhoodFilter) &&
+      (propertyTypeFilter === "" || property.classification === propertyTypeFilter) &&
+      (priceRangeFilter === "" || checkPriceRange(property.price, priceRangeFilter)) &&
+      (!selectedSuites || property.suites === selectedSuites) &&
+      (!selectedGarageCount || property.garage === selectedGarageCount)
+    );
+
+    if (activeFilter === "date") {
+      // Ordenar as propriedades pelo ID (imóveis adicionados recentemente primeiro)
+      filteredProperties.sort((a, b) => b.id - a.id);
+    } else {
+      // Ordenar as propriedades pelo preço (padrão)
+      filteredProperties.sort((a, b) => a.price - b.price);
+    }
+
+    if (filteredProperties.length === 0) {
+      productList.innerHTML = "<p>Nenhum imóvel encontrado.</p>";
+    } else {
+      filteredProperties.forEach(property => {
+        const productCard = createProductCard(property);
+        productList.appendChild(productCard);
+      });
+    }
+  }
+
+
+
+
+
+
+  // Função para definir o filtro ativo como "date"
+  function setActiveFilterToDate() {
+    activeFilter = "date";
+    updateProductList();
+  }
+
+  // Função para definir o filtro ativo como "price"
+  function setActiveFilterToPrice() {
+    activeFilter = "price";
+    updateProductList();
+  }
+  function updateProductList() {
+    const bedroomsFilter = document.getElementById("bedrooms").value;
+    const neighborhoodFilter = document.getElementById("neighborhood").value;
+    const propertyTypeFilter = document.getElementById("propertyType").value;
+    const priceRangeFilter = document.getElementById("priceRange").value;
+    const productList = document.getElementById("productList");
+
+    productList.innerHTML = "";
+
+    const selectedSuites = selectedNumber ? parseInt(selectedNumber.textContent) : null;
+    const selectedGarageCount = selectedGarage ? parseInt(selectedGarage.textContent) : null;
+
+    let filteredProperties = properties.filter(property =>
+      (bedroomsFilter === "" || property.bedrooms === parseInt(bedroomsFilter)) &&
+      (neighborhoodFilter === "" || property.neighborhood === neighborhoodFilter) &&
+      (propertyTypeFilter === "" || property.classification === propertyTypeFilter) &&
+      (priceRangeFilter === "" || checkPriceRange(property.price, priceRangeFilter)) &&
+      (!selectedSuites || property.suites === selectedSuites) &&
+      (!selectedGarageCount || property.garage === selectedGarageCount)
+    );
+
+    if (activeFilter === "date") {
+      // Ordenar as propriedades pelo ID (imóveis adicionados recentemente primeiro)
+      filteredProperties.sort((a, b) => b.id - a.id);
+    } else {
+      // Ordenar as propriedades pelo preço (padrão)
+      filteredProperties.sort((a, b) => a.price - b.price);
+    }
+
+    if (filteredProperties.length === 0) {
+      productList.innerHTML = "<p>Nenhum imóvel encontrado.</p>";
+    } else {
+      const filterDescription = generateFilterDescription();
+      const filterDescriptionElement = document.createElement("p");
+      filterDescriptionElement.classList.add("filter-description"); // Adicione a classe para o estilo
+      filterDescriptionElement.innerHTML = filterDescription; // Use innerHTML para renderizar o >
+      productList.appendChild(filterDescriptionElement);
+
+      filteredProperties.forEach(property => {
+        const productCard = createProductCard(property);
+        productList.appendChild(productCard);
+      });
+    }
+  }
+
+  // Resto do código ...
+
+  // Função para gerar a descrição do filtro selecionado
+  function generateFilterDescription() {
+    const bedroomsFilter = document.getElementById("bedrooms").value;
+    const neighborhoodFilter = document.getElementById("neighborhood").value;
+    const propertyTypeFilter = document.getElementById("propertyType").value;
+    const priceRangeFilter = document.getElementById("priceRange").value;
+
+    let description = "";
+    if (propertyTypeFilter) {
+
+    }
+
+
+    document.getElementById("hideSoldCheckbox").addEventListener("change", updateProductList);
+    function updateProductList() {
+    const bedroomsFilter = document.getElementById("bedrooms").value;
+    const neighborhoodFilter = document.getElementById("neighborhood").value;
+    const propertyTypeFilter = document.getElementById("propertyType").value;
+    const priceRangeFilter = document.getElementById("priceRange").value;
+    const productList = document.getElementById("productList");
+    const hideSold = document.getElementById("hideSoldCheckbox").checked; // Verifica se a caixa de seleção está marcada
+
+    productList.innerHTML = "";
+
+    const selectedSuites = selectedNumber ? parseInt(selectedNumber.textContent) : null;
+    const selectedGarageCount = selectedGarage ? parseInt(selectedGarage.textContent) : null;
+
+    let filteredProperties = properties.filter(property =>
+        (bedroomsFilter === "" || property.bedrooms === parseInt(bedroomsFilter)) &&
+        (neighborhoodFilter === "" || property.neighborhood === neighborhoodFilter) &&
+        (propertyTypeFilter === "" || property.classification === propertyTypeFilter) &&
+        (priceRangeFilter === "" || checkPriceRange(property.price, priceRangeFilter)) &&
+        (!selectedSuites || property.suites === selectedSuites) &&
+        (!selectedGarageCount || property.garage === selectedGarageCount) &&
+        (!property.sold || !hideSold) // Verifica se o imóvel está vendido e se a caixa de seleção de ocultar vendidos está marcada
+    );
+
+    if (filteredProperties.length === 0) {
+        productList.innerHTML = "<p>Nenhum imóvel encontrado.</p>";
+    } else {
+        filteredProperties.forEach(property => {
+            const productCard = createProductCard(property);
+            productList.appendChild(productCard);
+        });
+    }
+}
+
+
+
+    // Remova o > final e retorne a descrição
+    return description.replace(/\s*>\s*$/, ""); // Remove > e espaços em branco ao final
+  }
+
+
+</script>
+
+<script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .invisible-on-large {
+            display: none; /* Inicialmente oculto */
+        }
+
+        @media (max-width: 768px) { /* Ajuste o valor conforme necessário */
+            .invisible-on-large {
+                display: block; /* Exibe o elemento em telas menores */
+                pointer-events: none; /* Não permite interação com o elemento */
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="invisible-on-large" style="margin-top: 100px; color: white;">.</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

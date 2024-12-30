@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postar Imóvel</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-storage.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXab1YY9Pj8jG6pP4m5Y4tH5M5yY5lZK5X5R5Q5S5T5U5V5W5X5Y5Z5a5b5c5d5e5f5g5h5i5j5k5l5m5n5o5p5q5r5s5t5u5v5w5x5y5z5" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Nobile:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+        /* Reset de estilos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Raleway;
+        }
+        body {
+            background-color: #222222;
+            display: flex;
+            justify-content: center;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 40px;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+        }
+        .input-field,
+        .textarea-field,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            transition: border-color 0.3s;
+        }
+        .input-field:focus,
+        .textarea-field:focus,
+        select:focus {
+            border-color: #2c3e50;
+            outline: none;
+        }
+        .textarea-field {
+            resize: vertical;
+            height: 100px;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2c3e50;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #1a252f;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .feature-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+        .feature-item:hover {
+            background-color: #eaeaea;
+        }
+        .feature-icon {
+            font-size: 40px;
+            color: #7a7a7a;
+            transition: color 0.3s;
+            margin-bottom: 10px;
+        }
+        .feature-item:hover .feature-icon {
+            color: #000;
+        }
+        .feature-title {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .quantity-selector {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .quantity-button {
+            background-color: #ddd;
+            border: none;
+            padding: 8px 12px;
+            font-size: 16px;
+            color: #555;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .quantity-button.active,
+        .quantity-button:hover {
+            background-color: #2c3e50;
+            color: #fff;
+        }
+        @media (max-width: 600px) {
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1 class="form-title">Anunciar Imóvel</h1>
+
+        <!-- Tipo de Imóvel -->
+        <div class="input-group">
+            <label for="tipo" class="input-label">Tipo de Imóvel</label>
+            <select id="tipo" class="input-field">
+                <option value="">Selecione o tipo de imóvel</option>
+                <option value="Apartamento">Apartamento</option>
+                <option value="Casa">Casa</option>
+                <option value="Alto Padrão">Alto Padrão</option>
+                <option value="Condomínio">Condomínio</option>
+            </select>
+        </div>
+
+        <!-- Status do Imóvel -->
+        <div class="input-group">
+            <label for="status" class="input-label">Status do Imóvel</label>
+            <select id="status" class="input-field">
+                <option value="">Selecione o status</option>
+                <option value="Pronto">Pronto</option>
+                <option value="Em andamento">Em andamento</option>
+            </select>
+        </div>
+
+        <!-- Localização -->
+        <div class="input-group">
+            <label for="localizacao" class="input-label">Localização</label>
+            <input type="text" id="localizacao" class="input-field" placeholder="Escreva a localização">
+        </div>
+
+        <!-- Título do Imóvel -->
+        <div class="input-group">
+            <label for="titulo" class="input-label">Título do Imóvel</label>
+            <input type="text" id="titulo" class="input-field" placeholder="Título do Imóvel">
+        </div>
+
+        <!-- Descrição do Imóvel -->
+        <div class="input-group">
+            <label for="descricao" class="input-label">Descrição do Imóvel</label>
+            <textarea id="descricao" class="textarea-field" placeholder="Descrição detalhada"></textarea>
+        </div>
+
+        <!-- Código do Imóvel -->
+        <div class="input-group">
+            <label for="codigo" class="input-label">Código do Construtor</label>
+            <input type="text" id="codigo" class="input-field" placeholder="Código do Construtor">
+        </div>
+
+        <h2 style="text-align: center; margin: 20px;">Comodidades:</h2>
+
+        <div class="features-grid">
+            <!-- Quartos -->
+            <div class="feature-item" data-feature="quartos">
+                <i class="fas fa-bed feature-icon"></i>
+                <div class="feature-title">Quartos</div>
+                <div class="quantity-selector">
+                    <button class="quantity-button" data-value="1">1</button>
+                    <button class="quantity-button" data-value="2">2</button>
+                    <button class="quantity-button" data-value="3">3</button>
+                    <button class="quantity-button" data-value="4">4+</button>
+                </div>
+            </div>
+            <!-- Banheiros -->
+            <div class="feature-item" data-feature="banheiros">
+                <i class="fas fa-bath feature-icon"></i>
+                <div class="feature-title">Banheiros</div>
+                <div class="quantity-selector">
+                    <button class="quantity-button" data-value="1">1</button>
+                    <button class="quantity-button" data-value="2">2</button>
+                    <button class="quantity-button" data-value="3">3</button>
+                    <button class="quantity-button" data-value="4">4+</button>
+                </div>
+            </div>
+            <!-- Garagens -->
+            <div class="feature-item" data-feature="garagens">
+                <i class="fas fa-car feature-icon"></i>
+                <div class="feature-title">Garagens</div>
+                <div class="quantity-selector">
+                    <button class="quantity-button" data-value="1">1</button>
+                    <button class="quantity-button" data-value="2">2</button>
+                    <button class="quantity-button" data-value="3">3</button>
+                    <button class="quantity-button" data-value="4">4+</button>
+                </div>
+            </div>
+            <!-- Suítes -->
+            <div class="feature-item" data-feature="suites">
+                <i class="fas fa-door-open feature-icon"></i>
+                <div class="feature-title">Suítes</div>
+                <div class="quantity-selector">
+                    <button class="quantity-button" data-value="1">1</button>
+                    <button class="quantity-button" data-value="2">2</button>
+                    <button class="quantity-button" data-value="3">3</button>
+                    <button class="quantity-button" data-value="4">4+</button>
+                </div>
+            </div>
+            <!-- Sala -->
+            <div class="feature-item" data-feature="sala">
+                <i class="fas fa-couch feature-icon"></i>
+                <div class="feature-title">Sala</div>
+                <div class="quantity-selector">
+                    <button class="quantity-button" data-value="1">1</button>
+                    <button class="quantity-button" data-value="2">2</button>
+                </div>
+            </div>
+            <!-- Cozinha -->
+            <div class="feature-item" data-feature="cozinha">
+                <i class="fas fa-utensils feature-icon"></i>
+                <div class="feature-title">Cozinha</div>
+                <div class="quantity-selector">
+                    <button class="quantity-button" data-value="1">1</button>
+                    <button class="quantity-button" data-value="2">2</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Preço do Imóvel -->
+        <div class="input-group">
+            <label for="preco" class="input-label">Preço do Imóvel</label>
+            <input type="number" id="preco" class="input-field" placeholder="R$">
+        </div>
+
+        <!-- m² do Imóvel -->
+        <div class="input-group">
+            <label for="area" class="input-label">Área do Imóvel (m²)</label>
+            <input type="number" id="area" class="input-field" placeholder="Área em m²">
+        </div>
+
+        <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixar Imagens como ZIP</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        label {
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button {
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            display: block;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+        button:not(:disabled):hover {
+            background-color: #161616;
+        }
+
+        #imagePreview {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 600px) {
+            .image-container {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Selecione as Imagens</h2>
+    <label for="fileInput">Escolher Imagens</label>
+    <input type="file" id="fileInput" accept="image/*" multiple>
+    <button id="downloadZip" disabled>Baixar Imagens como ZIP</button>
+
+    <div id="imagePreview"></div>
+
+    <script>
+        let selectedFiles = [];
+
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            selectedFiles = event.target.files;
+            if (selectedFiles.length > 0) {
+                document.getElementById('downloadZip').disabled = false;
+                previewImages(selectedFiles);
+            }
+        });
+
+        document.getElementById('downloadZip').addEventListener('click', function() {
+            if (selectedFiles.length > 0) {
+                const zip = new JSZip();
+                const imgFolder = zip.folder("imagens");
+
+                Array.from(selectedFiles).forEach(file => {
+                    imgFolder.file(file.name, file);
+                });
+
+                zip.generateAsync({ type: "blob" }).then(function(content) {
+                    const link = document.createElement("a");
+                    link.href = URL.createObjectURL(content);
+                    link.download = "imagens.zip";
+                    link.click();
+                    URL.revokeObjectURL(link.href);
+                }).catch(function(error) {
+                    console.error('Erro ao gerar ZIP:', error);
+                });
+            }
+        });
+
+        function previewImages(files) {
+            const previewContainer = document.getElementById('imagePreview');
+            previewContainer.innerHTML = ""; // Limpar o preview anterior
+
+            Array.from(files).forEach(file => {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const imgElement = document.createElement('div');
+                    imgElement.classList.add('image-container');
+                    imgElement.innerHTML = `<img src="${event.target.result}" alt="${file.name}">`;
+                    previewContainer.appendChild(imgElement);
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+    </script>
+</body>
+</html>
+
+
+        <h3 style="text-align: center; margin: 20px;">Favor mandar as imagens do imóvel no WhatsApp, se possível no formato 1:1 ou 3:4</h3>
+
+        <!-- Botão de Envio -->
+        <button class="submit-button" onclick="submitForm()">Anunciar</button>
+    </div>
+
+    <script>
+        function submitForm() {
+            const tipo = document.getElementById("tipo").value || "Nenhum";
+            const status = document.getElementById("status").value || "Nenhum";
+            const localizacao = document.getElementById("localizacao").value || "Nenhum";
+            const titulo = document.getElementById("titulo").value || "Nenhum";
+            const descricao = document.getElementById("descricao").value || "Nenhum";
+            const preco = document.getElementById("preco").value || "Nenhum";
+            const area = document.getElementById("area").value || "Nenhum";
+            const codigo = document.getElementById("codigo").value || "Nenhum";
+
+            const features = {};
+            document.querySelectorAll('.feature-item').forEach(item => {
+                const featureName = item.getAttribute('data-feature');
+                const activeButton = item.querySelector('.quantity-button.active');
+                features[featureName] = activeButton ? activeButton.getAttribute('data-value') : 'Nenhum';
+            });
+
+            const whatsappNumber = "5583986233020"; // Seu número de WhatsApp
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=Imóvel%20${status}%20em%20${localizacao}%0A%0A*Tipo%20de%20Imóvel:*%20${tipo}%0A*Preço:*%20R$${preco}%0A*Área:*%20${area}m²%0A*Código:*%20${codigo}%0A*Quartos:*%20${features['quartos']}%0A*Banheiros:*%20${features['banheiros']}%0A*Garagens:*%20${features['garagens']}%0A*Suítes:*%20${features['suites']}%0A*Salas:*%20${features['sala']}%0A*Cozinhas:*%20${features['cozinha']}%0A%0A*Título:*%20${titulo}%0A*Descrição:*%20${descricao}%0A%0A`;
+
+            window.open(whatsappURL, '_blank');
+        }
+
+        document.querySelectorAll('.quantity-button').forEach(button => {
+            button.addEventListener('click', function () {
+                const parent = button.parentElement;
+                parent.querySelectorAll('.quantity-button').forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                console.log(`Feature ${parent.parentElement.getAttribute('data-feature')}: ${button.getAttribute('data-value')}`);
+            });
+        });
+    </script>
+</body>
+</html>

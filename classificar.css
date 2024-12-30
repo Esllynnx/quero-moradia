@@ -1,0 +1,128 @@
+
+/* Estilo do Cabeçalho */
+header {
+  background-color: #283c5f;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Estilo do Formulário de Filtragem */
+.filters {
+  background-color: #f3f2f2;
+  width: 100%;
+}
+
+/* Aplica a sombra apenas em telas maiores que 768px de largura */
+@media only screen and (min-width: 768px) {
+  .filters {
+    position: fixed; /* Fixa o filtro na parte superior */
+    top: 0; /* Posiciona o filtro no topo da página */
+    left: 0;
+    margin-top: 70px;
+    z-index: 2; /* Garante que o filtro fique sobre outros elementos */
+    box-sizing: border-box; /* Inclui o padding e a borda na largura total */
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5); /* Ajuste a opacidade (0.5) e o desfoque (20px) conforme necessário */
+  }
+}
+
+
+
+/* Adicionando uma margem superior de 5% para telas maiores usando media query */
+@media screen and (min-width: 768px) {
+
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+select {
+  border: none;
+  outline: none; /* Remove a borda de foco ao selecionar o elemento */
+  background-color: transparent; /* Faz o fundo ser transparente para remover qualquer sombra ou cor de fundo padrão */
+  font-family: Raleway;
+  border-radius: 0px;
+}
+
+@media (min-width: 768px) {
+  select {
+    border: none;
+    outline: none; /* Remove a borda de foco ao selecionar o elemento */
+    background-color: transparent; /* Faz o fundo ser transparente para remover qualquer sombra ou cor de fundo padrão */
+    font-family: Raleway;
+    border-radius: 0px;
+    border-bottom: 1px solid black; /* Adiciona uma linha na parte inferior */
+  }
+}
+
+
+/* Estilo da Exibição Sofisticada da Lista de Produtos */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px; /* Margem para telas menores */
+}
+
+@media (min-width: 768px) { /* Ajuste o valor do breakpoint conforme necessário */
+  .product-list {
+    margin-top: 10%; /* Margem para telas maiores */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.input-container {
+  position: relative;
+}
+
+.suggestions-card {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 2px); /* A largura do input menos a largura das bordas */
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999;
+  display: none; /* Oculta por padrão */
+}
+
+.suggestions-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions-card li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestions-card li:hover {
+  background-color: #f2f2f2;
+}
