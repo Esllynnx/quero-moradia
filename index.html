@@ -953,56 +953,6 @@
      </div>
      <div class="subtext">
      </div>
-     <style>
-      .snowflake {
-        position: fixed;
-        top: -10px;
-        color: white;
-        font-size: 1em;
-        user-select: none;
-        pointer-events: none;
-        z-index: 9999;
-        animation-name: fall;
-        animation-timing-function: linear;
-      }
-    
-      @keyframes fall {
-        0% {
-          transform: translateY(0) rotate(0deg);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(100vh) rotate(360deg);
-          opacity: 0;
-        }
-      }
-    </style>
-    
-    <script>
-      function createSnowflake() {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        snowflake.textContent = '❄';
-    
-        // Configurações aleatórias para cada floco
-        snowflake.style.left = Math.random() * 100 + 'vw'; // Posição horizontal
-        snowflake.style.fontSize = Math.random() * 10 + 10 + 'px'; // Tamanho
-        snowflake.style.animationDuration = Math.random() * 5 + 3 + 's'; // Duração da queda
-        snowflake.style.animationDelay = Math.random() * 2 + 's'; // Atraso inicial
-    
-        // Adiciona o floco ao body
-        document.body.appendChild(snowflake);
-    
-        // Remove o floco ao terminar a animação
-        snowflake.addEventListener('animationend', () => {
-          snowflake.remove();
-        });
-      }
-    
-      // Adiciona neve continuamente em intervalos
-      setInterval(createSnowflake, 500); // A cada 500ms (ajustável)
-    </script>
-    
    </div>
  </body>
  </html>
