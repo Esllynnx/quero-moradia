@@ -8,6 +8,9 @@
 <body>
 </body>
 </html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -722,7 +725,7 @@
      .header {
        position: relative;
        height: 100vh;
-       background: url('fundo.jpeg') no-repeat center center;
+       background: url('fundo.jpg') no-repeat center center;
        background-size: cover;
        text-align: center; /* Altera o alinhamento do texto para centralizado */
        padding: 20px;
@@ -833,12 +836,12 @@
  
      .btn.contato {
        background-color: transparent;
-       border: 2px solid white;
+       border: 2px solid #d9d9d9;
      }
  
      /* Efeito de hover para o botão transparente */
      .btn.contato:hover {
-       background-color: white;
+       background-color: #d9d9d9;
        color: black; /* Ajusta a cor do texto para contraste */
      }
  
@@ -948,8 +951,8 @@
      <div style="font-family: Crimson Text;" class="logo">QUERO MORADIA</div>
      <div style="font-family: Crimson Text;" class="slogan"></div>
      <div class="button-container">
-       <a href="classificar.html" class="btn ver-imoveis">Ver Imóveis</a>
-       <a href="Menu/contato.html" class="btn contato">Contato</a>
+       <a href="classificar.html" class="btn ver-imoveis" style="font-family: Raleway;">Ver Imóveis</a>
+       <a href="Menu/contato.html" class="btn contato" style="font-family: Raleway;">Contato</a>
      </div>
      <div class="subtext">
      </div>
@@ -1376,7 +1379,7 @@ function selectImovel(tipo) {
 
 
 <div style="margin-top: 60px;" class="title-container">
-  <h1>Popular <i class="fa-solid fa-house-fire" style="color: #2b82c5;"></i></h1>
+  <h1>Popular <i class="fa-solid fa-house-fire" style="color: #b31c1c;"></i></h1>
 </div>
 
 
@@ -1647,92 +1650,7 @@ function selectImovel(tipo) {
 
 
 
-<style>
-  body {
-      font-family: 'Raleway', sans-serif;
-  }
 
-  .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 20px;
-  }
-
-  .item {
-      flex: 1 1 45%;
-      max-width: 45%;
-      box-sizing: border-box;
-      padding: 10px;
-      text-align: center;
-  }
-
-  .item img {
-    max-width: 40%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-
-  .item h2 {
-      font-weight: bold;
-      margin: 10px 0;
-      font-family: Raleway;
-  }
-
-  .item p {
-      margin: 0;
-      font-family: Raleway;
-  }
-
-  .instagram-icon {
-      margin-top: 10px;
-  }
-
-  .instagram-icon img {
-      width: 40px;
-      height: 40px;
-  }
-
-  @media (max-width: 768px) {
-      .item {
-          flex: 1 1 100%;
-          max-width: 100%;
-      }
-
-      .item img {
-          max-width: 50%;
-      }
-  }
-</style>
-</head>
-<body>
-<div style="background-color: #f4f4f4;" class="computer-info-container">
-
-  <div class="container">
-    <div class="item">
-        <img style="border-top-left-radius: 50px; border-bottom-right-radius: 20px;" src="edjunior.webp" alt="Ed Junior">
-        <h2>Edjunior Silva Bezerra</h2>
-        <p>Fundador da Imobiliária Quero Moradia, ícone nas mídias e responsável pela inovação e liderança no setor imobiliário.</p>
-        <div class="instagram-icon">
-            <a href="https://www.instagram.com/queromoradia/" target="_blank">
-              <i class="fa-brands fa-instagram" style="color: #000000; font-size: 30px;"></i>            </a>
-        </div>
-    </div>
-    <div class="item">
-        <img style="border-top-left-radius: 50px; border-bottom-right-radius: 20px;" src="elisangela.webp" alt="Elisângela">
-        <h2>Elisângela Silva Bezerra</h2>
-        <p>Membro da Equipe Quero Moradia, Elisangela tem um papel essencial na imobiliária como Corretora.</p>
-        <div class="instagram-icon">
-            <a href="https://www.instagram.com/elisangelasbezerra/" target="_blank">
-              <i class="fa-brands fa-instagram" style="color: #000000; font-size: 30px;"></i>
-            </a>
-        </div>
-    </div>
-  </div>
-  
-</div>
 
 
 
